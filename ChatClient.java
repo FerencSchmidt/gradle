@@ -4,7 +4,7 @@ import java.io.*;
 public class ChatClient
 {  private Socket socket              = null;
    private DataInputStream  console   = null;
-// Fix this: add "private DataOutputStream streamOut = null;" bellow and delete this line
+   private DataOutputStream streamOut = null;
 
    public ChatClient(String serverName, int serverPort)
    {  System.out.println("Establishing connection. Please wait ...");

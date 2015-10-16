@@ -1,20 +1,17 @@
 import java.net.*;
-// Fix this : change iport to import and delete this comment 
-iport java.io.*;
+import java.io.*;
 
 public class ChatServer
 {  private Socket          socket   = null;
    private ServerSocket    server   = null;
-// Fix this : change privte to private and delete this comment
-   privte DataInputStream streamIn =  null;
+   private DataInputStream streamIn =  null;
 
    public ChatServer(int port)
    {  try
       {  System.out.println("Binding to port " + port + ", please wait  ...");
          server = new ServerSocket(port);  
          System.out.println("Server started: " + server);
-// Fix this : delete # sign and this comment
-#         System.out.println("Waiting for a client ..."); 
+         System.out.println("Waiting for a client ..."); 
          socket = server.accept();
          System.out.println("Client accepted: " + socket);
          open();
